@@ -12,4 +12,10 @@ Rails.application.routes.draw do
 
   resources :users, controller: 'users/users', only: :show
 
+  resources :elements, controller: 'elements/elements' do # will show how much money we've raised in each element
+    # resources :causes, controller: 'causes/causes' do
+    #   resources :products, controller: 'products/products'
+    # end
+  end
+
 end
