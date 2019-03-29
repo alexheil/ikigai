@@ -1,4 +1,9 @@
 Welcome to Ninth Valley!
 
-<%= link_to "Sign In", sign_in_path %></br>
-<%= link_to "Register", register_path %>
+<% if user_signed_in? %>
+  <%= link_to current_user.username, user_path(current_user) %>
+  <%= link_to "Sign out", sign_out_path %>
+<% else %>
+  <%= link_to "Sign In", sign_in_path %></br>
+  <%= link_to "Register", register_path %>
+<% end %>
