@@ -1,0 +1,27 @@
+<%= provide(:title, "Create A Product") %>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="form-container padding-vertical">
+
+
+      <div class="title">
+        Create a product
+      </div>
+
+      <div class="padding-top">
+        <%= form_for(@product, url: element_cause_products_path) do |f| %>
+
+          <div class="field">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "text-field" %>
+          </div>
+
+          <%= f.submit "Create product", data: { disable_with: 'Creating...' }, class: "submit-button" %>
+        <% end %>
+      </div>
+
+
+    </div>
+  </div>
+</div>
