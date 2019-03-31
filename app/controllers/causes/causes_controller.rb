@@ -1,16 +1,14 @@
 class Causes::CausesController < ApplicationController
-  
+
   before_action :authenticate_user!, except: [:show, :index, :free]
   before_action :authenticate_owner, except: [:show, :index, :free]
 
   def free
     @element = Element.friendly.find(params[:element_id])
-    @causes = @element.causes.where(:cause_type => :free).popular
   end
 
   def index
     @element = Element.friendly.find(params[:element_id])
-    @causes = @element.causes.popular
   end
 
   def show
