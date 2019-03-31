@@ -1,7 +1,7 @@
 class CreateCauses < ActiveRecord::Migration[5.0]
   def change
     create_table :causes do |t|
-      t.reference :element
+      t.references :element
       t.string :title
       t.string :image1
       t.string :image2

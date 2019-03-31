@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190329181637) do
+ActiveRecord::Schema.define(version: 20190331014504) do
+
+  create_table "causes", force: :cascade do |t|
+    t.integer  "element_id"
+    t.string   "title"
+    t.string   "image1"
+    t.string   "image2"
+    t.string   "image3"
+    t.text     "description"
+    t.text     "important"
+    t.text     "plan"
+    t.string   "raised"
+    t.string   "slug"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["element_id"], name: "index_causes_on_element_id"
+  end
 
   create_table "elements", force: :cascade do |t|
     t.string   "title"
@@ -19,6 +35,31 @@ ActiveRecord::Schema.define(version: 20190329181637) do
     t.string   "slug"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.integer  "cause_id"
+    t.string   "title"
+    t.text     "description"
+    t.text     "mini_description"
+    t.text     "element"
+    t.integer  "base_price"
+    t.integer  "shipping_price"
+    t.integer  "total_price"
+    t.integer  "quantity"
+    t.text     "cause"
+    t.integer  "amount_to_product"
+    t.integer  "amount_to_cause"
+    t.integer  "amount_to_company"
+    t.integer  "size"
+    t.integer  "color"
+    t.string   "image1"
+    t.string   "image2"
+    t.string   "image3"
+    t.string   "slug"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["cause_id"], name: "index_products_on_cause_id"
   end
 
   create_table "users", force: :cascade do |t|

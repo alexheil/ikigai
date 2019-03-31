@@ -1,7 +1,7 @@
 class CreateProducts < ActiveRecord::Migration[5.0]
   def change
     create_table :products do |t|
-      t.reference :cause
+      t.references :cause
       t.string :title
       t.text :description
       t.text :mini_description
@@ -15,8 +15,8 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer :amount_to_product
       t.integer :amount_to_cause
       t.integer :amount_to_company
-      t.enum :size
-      t.enum :color
+      t.integer :size
+      t.integer :color
       t.string :image1
       t.string :image2
       t.string :image3
