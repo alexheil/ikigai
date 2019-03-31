@@ -1,5 +1,4 @@
 class Elements::ElementsController < ApplicationController
-  class Cities::CitiesController < ApplicationController
 
   before_action :authenticate_user!, except: :show
   before_action :authenticate_owner, except: :show

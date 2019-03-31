@@ -1,0 +1,62 @@
+<%= provide(:title, "Create A Thing") %>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="form-container padding-vertical">
+
+
+      <div class="title">
+        Create a cause
+      </div>
+
+      <div class="padding-top">
+        <%= form_for(@cause, url: element_causes_path) do |f| %>
+
+          <div class="field">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image1 %>
+            <%= f.text_field :image1, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image2 %>
+            <%= f.text_field :image2, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image3 %>
+            <%= f.text_field :image3, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_field :description, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :important %>
+            <%= f.text_area :important, class: "text-area" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :plan %>
+            <%= f.text_area :plan, class: "text-area" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :raised %>
+            <%= f.text_field :raised, class: "text-area" %>
+          </div>
+
+          <%= f.submit "Create cause", data: { disable_with: 'Creating...' }, class: "submit-button" %>
+        <% end %>
+      </div>
+
+
+    </div>
+  </div>
+</div>

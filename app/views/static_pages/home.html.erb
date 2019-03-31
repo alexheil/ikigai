@@ -7,3 +7,8 @@ Welcome to Ninth Valley!
   <%= link_to "Sign In", sign_in_path %></br>
   <%= link_to "Register", register_path %>
 <% end %>
+
+</br>
+<% Element.all.each do |element| %>
+  <%= link_to element.title, element_path(element) %>
+<% end %>

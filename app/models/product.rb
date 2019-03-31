@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
   extend FriendlyId
-  friendly_id :username, use: :slugged
-  
+  friendly_id :title, use: :slugged
+
 end

@@ -1,5 +1,9 @@
 class Cause < ApplicationRecord
   extend FriendlyId
-  friendly_id :username, use: :slugged
-  
+  friendly_id :title, use: :slugged
+
+  belongs_to :element
+
+  has_many :products
+
 end
