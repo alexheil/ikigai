@@ -122,6 +122,22 @@ a {
   padding-right: 2vh;
 }
 
+/* ******************* BLOCKS ****************** */
+
+.one-third-column {
+  margin: 0;
+  width: 32%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.two-third-column {
+  margin: 0;
+  width: 65%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 /* *************** FLASH ***************** */
 
 .flash {
@@ -171,6 +187,13 @@ a {
 .container {
   width: 96%;
   margin: 0 auto;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* ************ HEADER *********************** */
