@@ -17,7 +17,7 @@
 
 $main: #00ae80; /* OCEAN GREEN */
 $light: #73D9BD; /* SPRING RAIN */
-$dark: #FF5C00; /* HOKEY POKEY */
+$dark: #AE6A42; /* HOKEY POKEY */
 $green: #47B975; /* OCEAN GREEN */
 $border: #BEC8CE; /* LOBLOLLY */
 $red: #F44336; /* POMEGRANATE */
@@ -112,6 +112,11 @@ a {
   padding-bottom: 2vh;
 }
 
+.padding-vertical-large {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
 .padding-horizontal {
   padding-left: 2vh;
   padding-right: 2vh;
@@ -171,11 +176,20 @@ a {
 /* ************ HEADER *********************** */
 
 .header-container {
-  width: 100%;
+  width: 96%;
   margin: 0 auto;
   background: transparent;
   a {
     color: $black;
+  }
+}
+
+.header-container-menu {
+  width: 96%;
+  margin: 0 auto;
+  background: transparent;
+  a {
+    color: $grey;
   }
 }
 
@@ -186,9 +200,9 @@ a {
     display: block;
     width: 100%;
     font-weight: 400;
-    font-size: 1.75em;
+    font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: .25em;
+    letter-spacing: .3em;
     color: $main;
     &:hover {
       text-decoration: none;
@@ -199,13 +213,13 @@ a {
     width: 100%;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left;
     display: block;
     li {
       width: 30%;
       display: inline-block;
       position: relative;
-      text-align: center;
+      text-align: left;
     }
   }
 }
@@ -213,11 +227,19 @@ a {
 #menu-click {
   @include transition;
   cursor: pointer;
-  color: $white;
-  padding: 1vh 2vw 1vh 1vw;
+  padding-right: 2vw;
   font-weight: 400;
   letter-spacing: $letterspacer;
   color: $black;
+}
+
+#menu-click-menu {
+  @include transition;
+  cursor: pointer;
+  padding-right: 2vw;
+  font-weight: 400;
+  letter-spacing: $letterspacer;
+  color: $grey;
 }
 
 #menu-container {
@@ -225,7 +247,6 @@ a {
   width: 100%;
   top: 0;
   right: 0;
-  font-size: 1.75em;
   background: $main;
 }
 
@@ -238,11 +259,12 @@ a {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left;
     li {
-      padding: 3vh 0;
+      padding: 2vh 0;
       position: relative;
-      text-align: center;
+      text-align: left;
+      font-size: 1.75em;
     }
   }
   .nav-links {
@@ -256,10 +278,9 @@ a {
   .bottom {
     position: absolute;
     bottom: 0;
-    right: 0;
     padding: 4vh 0;
-    width: 100%;
-    text-align: center;
+    width: 96%;
+    text-align: left;
     cursor: pointer;
   }
 }

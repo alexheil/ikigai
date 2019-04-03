@@ -1,14 +1,20 @@
-Welcome to Ninth Valley!
+<div class="wrapper">
+  <div class="container">
 
-<% if user_signed_in? %>
-  <%= link_to current_user.username, user_path(current_user) %>
-  <%= link_to "Sign out", sign_out_path %>
-<% else %>
-  <%= link_to "Sign In", sign_in_path %></br>
-  <%= link_to "Register", register_path %>
-<% end %>
+    Welcome to Ninth Valley!
 
-</br>
-<% Element.all.each do |element| %>
-  <%= link_to element.title, element_path(element) %>
-<% end %>
+    <% if user_signed_in? %>
+      <%= link_to current_user.username, user_path(current_user) %>
+      <%= link_to "Sign out", sign_out_path %>
+    <% else %>
+      <%= link_to "Sign In", sign_in_path %></br>
+      <%= link_to "Register", register_path %>
+    <% end %>
+
+    </br>
+    <% Element.all.each do |element| %>
+      <%= link_to element.title, element_path(element) %>
+    <% end %>
+
+  </div>
+</div>

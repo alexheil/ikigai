@@ -26,6 +26,10 @@ var menuToggle = function() {
     $('#menu-container').fadeOut(300);
   });
 
+  $('#menu-click-menu').click(function() {
+    $('#menu-container').fadeOut(300);
+  });
+
 };
 
 $(document).ready(menuToggle);
