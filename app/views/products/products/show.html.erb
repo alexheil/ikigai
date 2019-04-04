@@ -1,21 +1,37 @@
-<%= @product.title %>
-
 <div class="wrapper">
 
-  <div class="background">
+  <div class="green">
 
-  </div>
+    <div class="flex padding-vertical">
 
-  <div class="container">
-
-    <div class="flex">
       <div class="one-third-column">
-
+        <div class="post-title right">
+          <%= @product.title %>
+        </div>
       </div>
 
-      <div class="two-third-column">
-
+      <div class="one-third-column">
+        Giant picture
       </div>
+
+      <div class="one-third-column">
+        <div class="post-title padding-bottom">
+          $40<%= @product.base_price %>
+        </div>
+
+        <div class="padding-bottom">
+          There will be a mini description here!<%= @product.mini_description %>
+        </div>
+
+        <div class="padding-bottom">
+          Size - M<%= @product.size %>
+        </div>
+
+        <div class="padding-bottom">
+          Color - green<%= @product.color %>
+        </div>
+      </div>
+
     </div>
 
   </div>

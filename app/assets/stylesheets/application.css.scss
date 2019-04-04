@@ -122,6 +122,10 @@ a {
   padding-right: 2vh;
 }
 
+.padding-bottom {
+  padding-bottom: 2vh;
+}
+
 /* ******************* BLOCKS ****************** */
 
 .one-third-column {
@@ -136,6 +140,12 @@ a {
   width: 65%;
   display: inline-block;
   vertical-align: bottom;
+}
+
+/* ***************** TITLE **************** */
+
+.post-title {
+  font-size: 3em;
 }
 
 /* *************** FLASH ***************** */
@@ -194,6 +204,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.right {
+  text-align: right;
+}
+
+.green {
+  background: $main;
 }
 
 /* ************ HEADER *********************** */
