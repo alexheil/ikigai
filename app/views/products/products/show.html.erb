@@ -1,6 +1,10 @@
-<div class="container padding-bottom padding-top-large">
-  <div class="post-title right">
-    <%= @product.title %>
+<div class="padding-vertical">
+  <div class="product-title-background">
+    <div class="container">
+      <div class="post-title white-text right">
+        <%= @product.title %>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -21,7 +25,11 @@
 
     <div class="fifty">
 
-      <div class="post-title padding-vertical">
+      <div class="select-text">
+        30/1 combed ring spun 100% organic cotton | 4.4 oz/sq yd | made in usa
+      </div>
+
+      <div class="post-title">
         $40<%= @product.base_price %>
       </div>
 
@@ -29,12 +37,28 @@
         This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.<%= @product.mini_description %>
       </div>
 
-      <div class="select-text padding-vertical border-bottom">
-        SELECT YOUR SIZE<%= @product.size %>
+      <div class="padding-vertical border-bottom">
+        <div class="select-text">
+          SELECT YOUR SIZE<%= @product.size %>
+        </div>
+        <div class="">
+          list of sizes
+        </div>
+      </div>
+
+      <div class="padding-vertical border-bottom">
+        <div class="select-text">
+          SELECT YOUR COLOR<%= @product.color %>
+        </div>
+        <div class="">
+          list of colors
+        </div>
       </div>
 
       <div class="padding-vertical">
-        SELECT YOUR COLOR<%= @product.color %>
+        <div class="button">
+          buy
+        </div>
       </div>
 
     </div>

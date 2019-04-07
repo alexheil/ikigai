@@ -22,7 +22,7 @@ $green: #47B975; /* OCEAN GREEN */
 $border: #BEC8CE; /* LOBLOLLY */
 $red: #F44336; /* POMEGRANATE */
 $yellow: #ff9800; /* PIZAZZ */
-$black: #00261C; /* GREEN KELP */
+$black: #002017; /* GREEN KELP */
 $white: #FFF4ED; /* FAFAFA DESERT STORM */
 $grey: #ccc; /* GALLERY */
 $fancy: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -31,7 +31,7 @@ $night-background: #000;
 $night-text: #ccc;
 $night-content-background: #212121;
 
-$radius: 6px;
+$radius: 4px;
 $shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 $shadow-lite: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 $letterspacer: .05em;
@@ -95,6 +95,10 @@ a {
   background: $main;
 }
 
+.product-title-background {
+  background: $main;
+}
+
 /* ************************ FONT ***************** */
 
 .bold {
@@ -103,6 +107,27 @@ a {
 
 .thin {
   font-weight: 300;
+}
+
+.select-text {
+  font-size: .75em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-title {
+  line-height: 1em;
+  font-size: 5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.white-text {
+  color: $white;
+}
+
+.main-text {
+  color: $main;
 }
 
 /* *********************** SPACING **************** */
@@ -148,17 +173,6 @@ a {
   width: 65%;
   display: inline-block;
   vertical-align: bottom;
-}
-
-/* ***************** TITLE **************** */
-
-.post-title {
-  font-size: 5em;
-  font-weight: 700;
-}
-
-.white-text {
-  color: $white;
 }
 
 /* *************** FLASH ***************** */
@@ -332,6 +346,32 @@ a {
     width: 96%;
     text-align: left;
     cursor: pointer;
+  }
+}
+
+/* ************** FORMS ***************** */
+
+.button {
+  @include transition;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: .75em;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: $radius;
+  box-sizing: border-box;
+  font-family: $fancy;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  color: $main;
+  padding: 1vh 1vw;
+  background: transparent;
+  border: 2px solid $main;
+  -webkit-font-smoothing: unset;
+  &:hover {
+    background: $main;
+    color: $white;
   }
 }
 
