@@ -23,8 +23,8 @@ $border: #BEC8CE; /* LOBLOLLY */
 $red: #F44336; /* POMEGRANATE */
 $yellow: #ff9800; /* PIZAZZ */
 $black: #00261C; /* GREEN KELP */
-$white: #ffffff; /* FAFAFA DESERT STORM */
-$grey: #FFF4ED; /* GALLERY */
+$white: #FFF4ED; /* FAFAFA DESERT STORM */
+$grey: #ccc; /* GALLERY */
 $fancy: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $night-background: #000;
@@ -71,7 +71,7 @@ body {
   letter-spacing: 0px;
   font-family: $fancy;
   font-weight: 400;
-  background: $grey;
+  background: $white;
   color: $black;
   -webkit-font-smoothing: antialiased;
 }
@@ -126,11 +126,19 @@ a {
   padding-bottom: 2vh;
 }
 
+.padding-top-large {
+  padding-top: 5vh;
+}
+
+.border-bottom {
+  border-bottom: $grey solid 1px;
+}
+
 /* ******************* BLOCKS ****************** */
 
-.one-third-column {
+.fifty {
   margin: 0;
-  width: 32%;
+  width: 49%;
   display: inline-block;
   vertical-align: bottom;
 }
@@ -145,7 +153,12 @@ a {
 /* ***************** TITLE **************** */
 
 .post-title {
-  font-size: 3em;
+  font-size: 5em;
+  font-weight: 700;
+}
+
+.white-text {
+  color: $white;
 }
 
 /* *************** FLASH ***************** */
@@ -188,15 +201,11 @@ a {
 
 /* ***************** UNIVERSAL ************* */
 
-.wrapper {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-}
 
 .container {
   width: 96%;
   margin: 0 auto;
+  max-width: 1920px;
 }
 
 .flex {
@@ -210,8 +219,8 @@ a {
   text-align: right;
 }
 
-.green {
-  background: $main;
+.center {
+  text-align: center;
 }
 
 /* ************ HEADER *********************** */
@@ -230,7 +239,7 @@ a {
   margin: 0 auto;
   background: transparent;
   a {
-    color: $grey;
+    color: $white;
   }
 }
 
@@ -280,7 +289,7 @@ a {
   padding-right: 2vw;
   font-weight: 400;
   letter-spacing: $letterspacer;
-  color: $grey;
+  color: $white;
 }
 
 #menu-container {

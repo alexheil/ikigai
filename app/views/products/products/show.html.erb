@@ -1,35 +1,40 @@
-<div class="wrapper">
+<div class="container padding-bottom padding-top-large">
+  <div class="post-title right">
+    <%= @product.title %>
+  </div>
+</div>
 
-  <div class="green">
 
-    <div class="flex padding-vertical">
 
-      <div class="one-third-column">
-        <div class="post-title right">
-          <%= @product.title %>
-        </div>
+
+
+
+
+
+
+<div class="container">
+  <div class="flex">
+
+    <div class="fifty center">
+      <img class="image2" src="https://placehold.it/600" />
+    </div>
+
+    <div class="fifty">
+
+      <div class="post-title padding-vertical">
+        $40<%= @product.base_price %>
       </div>
 
-      <div class="one-third-column">
-        Giant picture
+      <div class="padding-vertical border-bottom">
+        This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.<%= @product.mini_description %>
       </div>
 
-      <div class="one-third-column">
-        <div class="post-title padding-bottom">
-          $40<%= @product.base_price %>
-        </div>
+      <div class="select-text padding-vertical border-bottom">
+        SELECT YOUR SIZE<%= @product.size %>
+      </div>
 
-        <div class="padding-bottom">
-          There will be a mini description here!<%= @product.mini_description %>
-        </div>
-
-        <div class="padding-bottom">
-          Size - M<%= @product.size %>
-        </div>
-
-        <div class="padding-bottom">
-          Color - green<%= @product.color %>
-        </div>
+      <div class="padding-vertical">
+        SELECT YOUR COLOR<%= @product.color %>
       </div>
 
     </div>
