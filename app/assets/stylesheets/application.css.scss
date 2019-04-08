@@ -122,6 +122,13 @@ a {
   text-transform: uppercase;
 }
 
+.sub-title {
+  line-height: 1em;
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .white-text {
   color: $white;
 }
@@ -156,7 +163,7 @@ a {
 }
 
 .border-bottom {
-  border-bottom: $grey solid 1px;
+  border-bottom: $main solid 1px;
 }
 
 /* ******************* BLOCKS ****************** */
@@ -168,11 +175,18 @@ a {
   vertical-align: bottom;
 }
 
-.two-third-column {
+.hundred {
   margin: 0;
-  width: 65%;
+  width: 100%;
   display: inline-block;
   vertical-align: bottom;
+}
+
+.product-image {
+  max-height: 600px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 /* *************** FLASH ***************** */

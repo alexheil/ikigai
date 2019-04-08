@@ -12,7 +12,7 @@
   <div class="flex">
 
     <div class="fifty center">
-      <img class="image2" src="https://placehold.it/600" />
+      <img class="product-image" src="https://placehold.it/600" />
     </div>
 
     <div class="fifty">
@@ -21,11 +21,14 @@
         30/1 combed ring spun 100% organic cotton | 4.4 oz/sq yd | made in usa
       </div>
 
-      <div class="post-title">
+      <div class="post-title padding-bottom border-bottom">
         $40<%= @product.base_price %>
       </div>
 
       <div class="padding-vertical border-bottom">
+        <div class="select-text">
+          <%= @product.title %>'s cause
+        </div>
         This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.<%= @product.mini_description %>
       </div>
 
@@ -49,11 +52,38 @@
 
       <div class="padding-vertical">
         <div class="button">
-          buy
+          Purchase
         </div>
       </div>
 
     </div>
 
   </div>
+
+
+  <div class="padding-vertical flex">
+
+    <div class="hundred">
+      <div class="sub-title padding-vertical">
+        What is <%= @product.title %>'s cause?
+      </div>
+
+      <div class="padding-bottom">
+        <%=  %>
+      </div>
+    </div>
+
+    <div class="fifty">
+      <div class="sub-title padding-vertical">
+        Breakdown
+      </div>
+    </div>
+
+    <div class="fifty">
+      <div class="sub-title padding-vertical">
+        Our Cause
+      </div>
+    </div>
+  </div>
+
 </div>
