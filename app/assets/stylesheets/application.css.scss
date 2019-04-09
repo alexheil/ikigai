@@ -22,9 +22,9 @@ $green: #47B975; /* OCEAN GREEN */
 $border: #BEC8CE; /* LOBLOLLY */
 $red: #F44336; /* POMEGRANATE */
 $yellow: #ff9800; /* PIZAZZ */
-$black: #002017; /* GREEN KELP */
+$black: #212121; /* GREEN KELP */
 $white: #FFF4ED; /* FAFAFA DESERT STORM */
-$grey: #ccc; /* GALLERY */
+$grey: #B99C89; /* GALLERY */
 $fancy: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $night-background: #000;
@@ -95,6 +95,10 @@ a {
   background: $main;
 }
 
+img {
+  border-radius: $radius;
+}
+
 .product-title-background {
   background: $main;
 }
@@ -163,7 +167,7 @@ a {
 }
 
 .border-bottom {
-  border-bottom: $main solid 1px;
+  border-bottom: $border solid 1px;
 }
 
 /* ******************* BLOCKS ****************** */
@@ -187,6 +191,7 @@ a {
   max-width: 100%;
   height: auto;
   width: auto;
+  margin: auto;
 }
 
 /* *************** FLASH ***************** */
@@ -363,6 +368,52 @@ a {
   }
 }
 
+/* ******************* FOOTER ***************** */
+
+.full-footer-container {
+  width: 100%;
+  clear: both;
+  padding-top: 5vh;
+}
+
+.footer {
+  font-size: .75em;
+  width: 100%;
+  display: inline-block;
+  span {
+    float: left;
+  }
+  .nav-links {
+    @include transition;
+    color: $grey;
+    padding: 0;
+    &:hover {
+      @include transition;
+      color: $black;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 1vw;
+      &:first-child {
+        margin: 0 1vw 0 0;
+      }
+    }
+  }
+}
+
+.footer-disclaimer {
+  font-size: .75em;
+  text-align: center;
+  color: $grey;
+  padding-bottom: 2vh;
+}
+
 /* ************** FORMS ***************** */
 
 .button {
@@ -378,14 +429,14 @@ a {
   font-family: $fancy;
   text-transform: uppercase;
   letter-spacing: 0px;
-  color: $main;
+  color: $white;
   padding: 1vh 1vw;
-  background: transparent;
+  background: $main;
   border: 2px solid $main;
   -webkit-font-smoothing: unset;
   &:hover {
-    background: $main;
-    color: $white;
+    background: transparent;
+    color: $main;
   }
 }
 
