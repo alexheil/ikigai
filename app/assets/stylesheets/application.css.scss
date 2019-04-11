@@ -233,6 +233,15 @@ img {
   height: auto;
   width: auto;
   margin: auto;
+}
+
+.product-image {
+  @include transition;
+  max-height: 720px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: auto;
   &:hover {
     box-shadow: $shadow;
   }
