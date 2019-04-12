@@ -97,7 +97,6 @@ a {
 
 img {
   border-radius: $radius;
-  box-shadow: $shadow-lite;
 }
 
 .product-title-background {
@@ -143,6 +142,9 @@ img {
 }
 
 /* *********************** SPACING **************** */
+.padding-left {
+  padding-left: 1vw;
+}
 
 .padding-vertical {
   padding-top: 2vh;
@@ -233,15 +235,18 @@ img {
   height: auto;
   width: auto;
   margin: auto;
+  box-shadow: $shadow;
 }
 
-.product-image {
+.product-image-small {
   @include transition;
   max-height: 720px;
   max-width: 100%;
   height: auto;
   width: auto;
   margin: auto;
+  cursor: pointer;
+  box-shadow: $shadow-lite;
   &:hover {
     box-shadow: $shadow;
   }
