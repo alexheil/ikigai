@@ -103,6 +103,11 @@ img {
   background: $main;
 }
 
+.element-background {
+  background: $main;
+  color: $white;
+}
+
 /* ************************ FONT ***************** */
 
 .bold {
@@ -121,7 +126,7 @@ img {
 
 .sub-text {
   font-size: .75em;
-  font-weight: 400;
+  font-weight: 100;
   text-transform: uppercase;
 }
 
@@ -148,6 +153,7 @@ img {
 }
 
 /* *********************** SPACING **************** */
+
 .padding-left {
   padding-left: 1vw;
 }
