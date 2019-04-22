@@ -264,6 +264,16 @@ img {
   }
 }
 
+.large-image {
+  @include transition;
+  max-height: 1080px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin: auto;
+  box-shadow: $shadow;
+}
+
 /* *************** FLASH ***************** */
 
 .flash {
