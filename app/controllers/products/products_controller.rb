@@ -76,7 +76,7 @@ class Products::ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:cause_id, :title, :description, :mini_description, :element, :base_price, :shipping_price, :total_price, :quantity, :element, :cause, :amount_to_product, :amount_to_cause, :amount_to_company, :size, :color, :image1, :image2, :image3)
+      params.require(:product).permit(:cause_id, :title, :description, :mini_description, :element, :base_price, :shipping_price, :total_price, :quantity, :element, :element_image, :cause, :cause_large_image, :cause_small_image, :amount_to_product, :product_plus1, :product_plus2, :product_plus3, :product_other, :amount_to_cause, :cause_plus1, :cause_plus2, :cause_plus3, :cause_other, :amount_to_company, :company_plus1, :company_plus2, :company_plus3, :company_other, :size, :color, :image1, :image2, :image3, :image4, :on_sale)
     end
 
 end
