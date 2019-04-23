@@ -220,6 +220,13 @@ img {
   vertical-align: bottom;
 }
 
+.fifty-auto {
+  margin: 0 auto;
+  width: 49%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 .seventy {
   margin: 0;
   width: 69%;
@@ -518,6 +525,30 @@ img {
   &:hover {
     background: transparent;
     color: $main;
+  }
+}
+
+.inverse-button {
+  @include transition;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: .75em;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: $radius;
+  box-sizing: border-box;
+  font-family: $fancy;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  color: $main;
+  padding: 1vh 1vw;
+  background: $white;
+  border: 2px solid $white;
+  -webkit-font-smoothing: unset;
+  &:hover {
+    background: transparent;
+    color: $white;
   }
 }
 
