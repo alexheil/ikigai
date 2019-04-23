@@ -4,6 +4,7 @@ class CreateElements < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :description
       t.string :image
+      t.string :color
       t.string :slug
 
       t.timestamps

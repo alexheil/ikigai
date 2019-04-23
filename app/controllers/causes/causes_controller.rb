@@ -68,7 +68,7 @@ class Causes::CausesController < ApplicationController
     end
 
     def cause_params
-      params.require(:cause).permit(:element_id, :title, :image1, :image2, :image3, :description, :important, :plan, :raised)
+      params.require(:cause).permit(:element_id, :title, :image_large_top, :image_description, :image_important, :image_disaster, :image_large_bottom, :image_plan, :image_product, :mini_description, :description, :important, :disaster, :plan, :raised)
     end
 
 end

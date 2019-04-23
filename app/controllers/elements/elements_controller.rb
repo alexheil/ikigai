@@ -53,7 +53,7 @@ class Elements::ElementsController < ApplicationController
     end
 
     def element_params
-      params.require(:element).permit(:title, :description, :image)
+      params.require(:element).permit(:title, :description, :color, :image)
     end
 
 
