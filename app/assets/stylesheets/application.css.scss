@@ -25,6 +25,12 @@ $yellow: #ff9800; /* PIZAZZ */
 $black: #212121; /* GREEN KELP */
 $white: #FFF4ED; /* FAFAFA DESERT STORM */
 $grey: #B99C89; /* GALLERY */
+
+$air: #48B9B9;
+$solar: #000000;
+$water: #104EAF;
+$earth: #000000;
+
 $fancy: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $night-background: #000;
@@ -551,6 +557,118 @@ img {
     color: $white;
   }
 }
+
+.form-container {
+  width: 40%;
+  margin: 0 auto;
+  .main-color {
+    a {
+      color: $main;
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+  .link-color {
+    a {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .link-light {
+    a {
+      color: $dark;
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+}
+
+.form-border {
+  @include coolborder;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+label {
+  @include textLabels;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+::placeholder {
+    color: $border;
+  }
+
+.text-label {
+  @include textLabels;
+}
+
+@mixin fields {
+  width: 100%;
+  font-size: 1em;
+  font-weight: 400;
+  border: none;
+  color: $white;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: $radius;
+  font-family: $fancy;
+  letter-spacing: .5px;
+}
+
+.StripeElement {
+  @include fields;
+  padding: 1vh 1vw;
+  background: $grey;
+  display: block;
+}
+
+select {
+  @include fields;
+  text-indent: 1vw;
+  background: $grey;
+  height: 4vh;
+  background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right $grey;
+  -webkit-appearance: none;
+  background-position-x: 98%;
+}
+
+.text-field {
+  @include fields;
+  padding: 1vh 1vw;
+  background: $grey;
+}
+
+.text-area {
+  @include fields;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 15vh;
+  max-height: 30vh;
+  height: 15vh;
+  padding: 1vh 1vw;
+  background: $grey;
+  display: block;
+}
+
+.field {
+  margin: 0 0 2vh 0;
+}
+
+
+
+
+
 
 
 @media screen and (max-width: 800px) {

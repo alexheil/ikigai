@@ -1,12 +1,12 @@
-<%= provide(:title, "Create A Element") %>
+<%= provide(:title, "Create An Element") %>
 
 <div class="wrapper">
   <div class="container">
     <div class="form-container padding-vertical">
 
 
-      <div class="title">
-        Create a element
+      <div class="padding-bottom sub-title">
+        Create an element
       </div>
 
       <div class="padding-top">
@@ -15,6 +15,11 @@
           <div class="field">
             <%= f.label :title %>
             <%= f.text_field :title, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :color %>
+            <%= f.text_field :color, class: "text-field" %>
           </div>
 
           <div class="field">
@@ -27,7 +32,7 @@
             <%= f.text_field :image, class: "text-field" %>
           </div>
 
-          <%= f.submit "Create element", data: { disable_with: 'Creating...' }, class: "submit-button" %>
+          <%= f.submit "Create element", data: { disable_with: 'Creating...' }, class: "button" %>
         <% end %>
       </div>
 
