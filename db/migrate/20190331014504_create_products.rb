@@ -5,7 +5,6 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :description
       t.text :mini_description
-      t.text :element
       t.integer :base_price
       t.integer :shipping_price
       t.integer :total_price
@@ -30,8 +29,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :company_plus2
       t.string :company_plus3
       t.string :company_other
-      t.integer :size
-      t.integer :color
+      t.string :color
       t.string :image1
       t.string :image2
       t.string :image3
