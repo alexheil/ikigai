@@ -29,7 +29,7 @@ class Products::ProductsController < ApplicationController
   def create
     @element = Element.friendly.find(params[:element_id])
     @cause = Cause.friendly.find(params[:cause_id])
-    @product = @cause.products.build(product_params)
+    @product = @cause.build_product(product_params)
     if @product.save
       flash[:notice] = "You just created " + @product.title + "!"
       redirect_to element_cause_product_path(@element, @cause, @product)

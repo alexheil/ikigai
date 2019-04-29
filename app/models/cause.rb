@@ -4,6 +4,6 @@ class Cause < ApplicationRecord
 
   belongs_to :element
 
-  has_many :products
+  has_one :product
 
 end

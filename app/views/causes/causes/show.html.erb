@@ -31,8 +31,8 @@
     </div>
 
     <div class="fifty">
-      <div class="">
-        <%= @cause.description %>
+      <div class="best">
+        <%= sanitize(@cause.description) %>
       </div>
     </div>
 
@@ -58,8 +58,8 @@
     </div>
 
     <div class="fifty">
-      <div class="">
-        <%= @cause.important %>
+      <div class="best">
+        <%= sanitize(@cause.important) %>
       </div>
     </div>
 
@@ -77,8 +77,8 @@
     </div>
 
     <div class="fifty">
-      <div class="">
-        <%= @cause.disaster %>
+      <div class="best">
+        <%= sanitize(@cause.disaster) %>
       </div>
     </div>
 
@@ -108,8 +108,8 @@
     </div>
 
     <div class="fifty">
-      <div class="">
-        <%= @cause.plan %>
+      <div class="best">
+        <%= sanitize(@cause.plan) %>
       </div>
     </div>
 
@@ -131,8 +131,8 @@
     </div>
 
     <div class="fifty">
-      <div class="">
-        <%= @cause.raised %>
+      <div class="best">
+        <%= sanitize(@cause.raised) %>
       </div>
     </div>
 
@@ -143,7 +143,7 @@
   </div>
 </div>
 
-<% if @cause.products.any? %>
+<% if @cause.product %>
 
 <div class="padding-vertical element-background">
 
@@ -159,12 +159,12 @@
         <img class="product-image" src="<%= @cause.image_product %>" />
       </div>
 
-      <% link_to cause_product_path(@cause, @cause.product) do %>
-      <div class="">
-        <div class="inverse-button">
-          Let me take a look!
+      <%= link_to element_cause_product_path(@element, @cause, @cause.product) do %>
+        <div class="">
+          <div class="inverse-button">
+            Let me take a look!
+          </div>
         </div>
-      </div>
       <% end %>
 
     </div>

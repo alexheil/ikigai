@@ -16,16 +16,16 @@
       <div class="ten">
         <div class="category-image-container">
           <div class="category-image-centered">
-            <div class="padding-bottom"><img class="product-image-small" src="https://saltinourhair.com/wp-content/uploads/2017/04/Things-To-Do-Mirissa-Sri-Lanka-coconut-tree-header.jpg" /></div>
-            <div class="padding-bottom"><img class="product-image-small" src="https://saltinourhair.com/wp-content/uploads/2017/04/Things-To-Do-Mirissa-Sri-Lanka-coconut-tree-header.jpg" /></div>
-            <div class="padding-bottom"><img class="product-image-small" src="https://saltinourhair.com/wp-content/uploads/2017/04/Things-To-Do-Mirissa-Sri-Lanka-coconut-tree-header.jpg" /></div>
-            <div><img class="product-image-small" src="https://saltinourhair.com/wp-content/uploads/2017/04/Things-To-Do-Mirissa-Sri-Lanka-coconut-tree-header.jpg" /></div>
+            <div class="padding-bottom"><img class="product-image-small" src="<%= @product.image1 %>" /></div>
+            <div class="padding-bottom"><img class="product-image-small" src="<%= @product.image2 %>" /></div>
+            <div class="padding-bottom"><img class="product-image-small" src="<%= @product.image3 %>" /></div>
+            <div><img class="product-image-small" src="<%= @product.image4 %>" /></div>
           </div>
         </div>
       </div>
 
       <div class="ninty">
-        <img class="product-image" src="https://saltinourhair.com/wp-content/uploads/2017/04/Things-To-Do-Mirissa-Sri-Lanka-coconut-tree-header.jpg" />
+        <img class="product-image" src="<%= @product.image1 %>" />
       </div>
     </div>
 
@@ -36,31 +36,31 @@
       </div>
 
       <div class="post-title padding-bottom border-bottom">
-        $40<%= @product.base_price %>
+        $<%= @product.base_price %>
       </div>
 
       <div class="padding-vertical border-bottom">
         <div class="select-text">
           <%= @product.title %>'s cause
         </div>
-        This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.<%= @product.mini_description %>
+        <%= @product.mini_description %>
       </div>
 
       <div class="padding-vertical border-bottom">
         <div class="select-text">
-          SELECT YOUR SIZE<%= @product.size %>
+          SELECT YOUR SIZE
         </div>
         <div class="">
-          list of sizes
+          XS, S, M, L, XL, XXL
         </div>
       </div>
 
       <div class="padding-vertical border-bottom">
         <div class="select-text">
-          SELECT YOUR COLOR<%= @product.color %>
+          SELECT YOUR COLOR
         </div>
         <div class="">
-          list of colors
+          Black, White, <%= @product.color %>
         </div>
       </div>
 
@@ -89,24 +89,27 @@
       </div>
 
       <div class="padding-bottom">
-        <img class="large-image" src="https://cdn.shopify.com/s/files/1/0200/7616/files/trees.png?v=1506004821" width="100%" />
+        <img class="large-image" src="<%= @product.cause_large_image %>" width="100%" />
       </div>
     </div>
 
     <div class="fifty">
       <div class="best">
-        Even bigger description of what the cause is. This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause. This is the description.</br></br> It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.Even bigger description of what the cause is. This is the description.</br></br> It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause. This is the description.</br></br> It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.Even bigger description of what the cause is. This is the description.</br></br> It will be a mini description.</br></br> So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause. This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.</br></br><%= @product.cause %>
+        <%= sanitize(@product.cause) %>
       </div>
     </div>
 
     <div class="fifty">
       <div class="padding-bottom">
-        <img class="product-image" src="https://saltinourhair.com/wp-content/uploads/2017/04/Things-To-Do-Mirissa-Sri-Lanka-coconut-tree-header.jpg" />
+        <img class="product-image" src="<%= @product.cause_small_image %>" />
       </div>
 
-      <div class="button">
-        I want to learn more!
-      </div>
+      <% link_to cause_path(@cause) do %>
+        <div class="button">
+          I want to learn more!
+        </div>
+      <% end %>
+
     </div>
   </div>
 
@@ -118,44 +121,53 @@
       </div>
       <div class="padding-bottom">
         <div>
-          <span class="select-text">Shirt: $12.80</span>
+          <span class="select-text">Shirt: $<%= @product.amount_to_product %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Royal Apparel 5051ORG: $11.30</span>
+          <span class="sub-text"><%= @product.product_plus1 %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Screen Printed Tags: $1.10</span>
+          <span class="sub-text"><%= @product.product_plus2 %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Shipping: $0.40</span> 
+          <span class="sub-text"><%= @product.product_plus3 %></span> 
+        </div>
+        <div class="padding-left">
+          <span class="sub-text"><%= @product.product_other %></span>
         </div>
       </div>
       <div class="padding-bottom">
         <div>
-          <span class="select-text">Cause: $20.00</span>
+          <span class="select-text">Cause: $<%= @product.amount_to_cause %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Shipping: $0.40</span>
+          <span class="sub-text"><%= @product.cause_plus1 %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Shipping: $0.40</span>
+          <span class="sub-text"><%= @product.cause_plus2 %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Shipping: $0.40</span>
+          <span class="sub-text"><%= @product.cause_plus3 %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Shipping: $0.40</span>
+          <span class="sub-text"><%= @product.cause_other %></span>
         </div>
       </div>
       <div class="padding-bottom">
         <div>
-          <span class="select-text">Ninth Valley: $7.20</span>
+          <span class="select-text">Ninth Valley: $<%= @product.amount_to_company %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Shipping: $0.40</span>
+          <span class="sub-text"><%= @product.company_plus1 %></span>
         </div>
         <div class="padding-left">
-          <span class="sub-text">Shipping: $0.40</span>
+          <span class="sub-text"><%= @product.company_plus2 %></span>
+        </div>
+        <div class="padding-left">
+          <span class="sub-text"><%= @product.company_plus3 %></span>
+        </div>
+        <div class="padding-left">
+          <span class="sub-text"><%= @product.company_other %></span>
         </div>
       </div>
     </div>
@@ -217,18 +229,18 @@
 
     <div class="hundred">
       <div class="sub-title padding-vertical">
-        This will help the Air
+        This will help <%= @element.title %>
       </div>
     </div>
 
     <div class="fifty">
-      <div class="">
-        Even bigger description of what the cause is. This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause. This is the description.</br></br> It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.Even bigger description of what the cause is. This is the description.</br></br> It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause. This is the description.</br></br> It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.Even bigger description of what the cause is. This is the description.</br></br> It will be a mini description.</br></br> So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause. This is the description. It will be a mini description. So very short, but also very informative. Like what it's made of and all that other crap. It may also go into a small description of the cause.</br></br><%= @product.cause %>
+      <div class="best">
+        <%= sanitize(@product.element) %>
       </div>
     </div>
 
     <div class="fifty">
-      <img class="product-image" src="https://saltinourhair.com/wp-content/uploads/2017/04/Things-To-Do-Mirissa-Sri-Lanka-coconut-tree-header.jpg" />
+      <img class="product-image" src="<%= @product.element_image %>" />
     </div>
 
   </div>
