@@ -1,0 +1,42 @@
+<%= provide(:title, "Edit An Element") %>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="form-container padding-vertical">
+
+
+      <div class="padding-bottom sub-title">
+        Edit an element
+      </div>
+
+      <div class="padding-top">
+        <%= form_for(@element, url: element_path) do |f| %>
+
+          <div class="field">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :color %>
+            <%= f.text_field :color, class: "text-field" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :description %>
+            <%= f.text_area :description, class: "text-area" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image %>
+            <%= f.text_field :image, class: "text-field" %>
+          </div>
+
+          <%= f.submit "Update element", data: { disable_with: 'Updating...' }, class: "button" %>
+        <% end %>
+      </div>
+
+
+    </div>
+  </div>
+</div>

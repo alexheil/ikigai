@@ -1,0 +1,30 @@
+<% if @element.present? %>
+  <meta name="theme-color" content="<%= @element.color %>" />
+  <style>
+    ::selection {
+      background: #<%= @element.color %>;
+    }
+    a {
+      color: #<%= @element.color %>;
+    }
+    .product-title-background {
+      background: #<%= @element.color %>;
+    }
+    .element-background {
+      background: #<%= @element.color %>;
+    }
+    #menu-container {
+      background: #<%= @element.color %>;
+    }
+    .button {
+      background: #<%= @element.color %>;
+      border: 2px solid #<%= @element.color %>;
+    }
+    .button:hover {
+      color: #<%= @element.color %>;
+    }
+    .inverse-button {
+      color: #<%= @element.color %>;
+    }
+  </style>
+<% end %>
