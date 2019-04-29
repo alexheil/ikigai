@@ -31,11 +31,13 @@
 
     <div class="thirty">
 
-      <div class="select-text">
-        30/1 combed ring spun 100% organic cotton | 4.4 oz/sq yd | made in usa
+      <div class="padding-bottom border-bottom">
+        <div class="select-text">
+          Ninth Valley can plant 72 trees thanks to good humans like you.
+        </div>
       </div>
 
-      <div class="post-title padding-bottom border-bottom">
+      <div class="post-title padding-vertical border-bottom">
         $<%= @product.base_price %>
       </div>
 
@@ -64,15 +66,9 @@
         </div>
       </div>
 
-      <div class="padding-vertical border-bottom">
+      <div class="padding-vertical">
         <div class="button">
           Purchase
-        </div>
-      </div>
-
-      <div class="padding-vertical">
-        <div class="select-text">
-          Ninth Valley can plant 72 trees thanks to good humans like you.
         </div>
       </div>
 
@@ -95,7 +91,7 @@
 
     <div class="fifty">
       <div class="best">
-        <%= sanitize(@product.cause) %>
+        <%= sanitize(@product.cause_text) %>
       </div>
     </div>
 
@@ -104,7 +100,7 @@
         <img class="product-image" src="<%= @product.cause_small_image %>" />
       </div>
 
-      <% link_to cause_path(@cause) do %>
+      <% link_to element_cause_path(@element, @cause) do %>
         <div class="button">
           I want to learn more!
         </div>
@@ -235,7 +231,7 @@
 
     <div class="fifty">
       <div class="best">
-        <%= sanitize(@product.element) %>
+        <%= sanitize(@product.element_text) %>
       </div>
     </div>
 

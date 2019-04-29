@@ -9,9 +9,9 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer :shipping_price
       t.integer :total_price
       t.integer :quantity
-      t.text :element
+      t.text :element_text
       t.string :element_image
-      t.text :cause
+      t.text :cause_text
       t.string :cause_large_image
       t.string :cause_small_image
       t.string :amount_to_product
