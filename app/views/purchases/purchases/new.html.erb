@@ -1,0 +1,70 @@
+<%= provide(:title, "Create A Purchase") %>
+
+<div class="padding-vertical">
+  <div class="product-title-background">
+    <div class="container">
+      <div class="post-title white-text right">
+        <%= @product.title %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="flex padding-bottom">
+    <div class="seventy-auto">
+
+      <div class="padding-vertical flex">
+        <div class="twenty-five">
+          <img class="product-image-small" src="<%= @product.image1 %>" />
+        </div>
+        <div class="twenty-five">
+          <img class="product-image-small" src="<%= @product.image2 %>" />
+        </div>
+        <div class="twenty-five">
+          <img class="product-image-small" src="<%= @product.image3 %>" />
+        </div>
+        <div class="twenty-five">
+          <img class="product-image-small" src="<%= @product.image4 %>" />
+        </div>
+      </div>
+
+      <div class="padding-vertical">
+        <img class="product-image" src="<%= @product.image1 %>" />
+      </div>
+
+      <div class="padding-vertical sub-title center">
+        Ninth Valley thanks you for your interest in helping our planet, just a few more details...
+      </div>
+
+      <div class="padding-vertical">
+        <%= form_for(@purchase, url: element_cause_product_purchases_path) do |f| %>
+
+        <div class="purchase-title padding-bottom center">
+          <%= f.label :full_name do %>
+            My full name is <%= f.text_field :full_name, class: "purchase-field" %>.
+          <% end %>
+
+          <%= f.label :color do %>
+            I would like <%= @product.title %> in <%= f.text_field :color, class: "purchase-field" %>.
+          <% end %>
+
+          <%= f.label :size do %>
+            My size is <%= f.text_field :size, class: "purchase-field" %>.
+          <% end %>
+
+          <%= f.label :street_address do %>
+            I live at <%= f.text_field :street_address, class: "purchase-field" %>,
+          <% end %>
+          <%= f.label :city do %>
+            <%= f.text_field :city, class: "purchase-field" %>  and this is where I will pick up my delivery. And I understand that clicking "Purchase" will charge my card $<%= @product.base_price %>.
+          <% end %>
+        </div>
+
+          <%= f.submit "Create purchase", data: { disable_with: 'Creating...' }, class: "button" %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-class Products::ProductsController < ApplicationController
+class Purchases::PurchasesController < ApplicationController
 
   before_action :authenticate_user!, except: [:show, :index]
   before_action :authenticate_owner, except: [:show, :index]
@@ -18,7 +18,8 @@ class Products::ProductsController < ApplicationController
   def new
     @element = Element.friendly.find(params[:element_id])
     @cause = Cause.friendly.find(params[:cause_id])
-    @product = Product.new
+    @product = Product.friendly.find(params[:product_id])
+    @purchase = Purchase.new
   end
 
   def create

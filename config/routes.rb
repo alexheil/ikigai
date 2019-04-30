@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
   resources :elements, controller: 'elements/elements' do
     resources :causes, controller: 'causes/causes' do
-      resources :products, controller: 'products/products'
+      resources :products, controller: 'products/products' do
+        resources :purchases, controller: 'purchases/purchases'
+      end
     end
   end
 

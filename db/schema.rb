@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190331014504) do
+ActiveRecord::Schema.define(version: 20190429220449) do
 
   create_table "causes", force: :cascade do |t|
     t.integer  "element_id"
@@ -83,6 +83,32 @@ ActiveRecord::Schema.define(version: 20190331014504) do
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.index ["cause_id"], name: "index_products_on_cause_id"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.integer  "size",               default: 0
+    t.integer  "color",              default: 0
+    t.string   "stripe_charge_id"
+    t.boolean  "use_your_card",      default: false
+    t.integer  "quantity",           default: 1
+    t.integer  "pay_your_own_price", default: 0
+    t.integer  "complete_price"
+    t.string   "full_name",          default: ""
+    t.string   "street_address",     default: ""
+    t.string   "city",               default: ""
+    t.string   "state",              default: ""
+    t.string   "country",            default: ""
+    t.string   "zip_code",           default: ""
+    t.boolean  "is_shipped",         default: false, null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.index ["product_id"], name: "index_purchases_on_product_id"
+    t.index ["stripe_charge_id"], name: "index_purchases_on_stripe_charge_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
+    t.index [nil], name: "index_purchases_on_currency"
+    t.index [nil], name: "index_purchases_on_price"
   end
 
   create_table "users", force: :cascade do |t|

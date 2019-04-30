@@ -4,4 +4,6 @@ class Product < ApplicationRecord
 
   belongs_to :cause
 
+  has_many :purchases
+
 end

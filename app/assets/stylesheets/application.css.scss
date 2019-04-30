@@ -151,6 +151,13 @@ img {
   text-transform: uppercase;
 }
 
+.purchase-title {
+  line-height: 1.6em;
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .white-text {
   color: $white;
 }
@@ -218,6 +225,13 @@ img {
   line-height: 1em;
 }
 
+.twenty-five {
+  margin: 0;
+  width: 24%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
 .thirty {
   margin: 0;
   width: 29%;
@@ -241,6 +255,13 @@ img {
 
 .seventy {
   margin: 0;
+  width: 69%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.seventy-auto {
+  margin: 0 auto;
   width: 69%;
   display: inline-block;
   vertical-align: bottom;
@@ -272,7 +293,7 @@ img {
 
 .product-image-small {
   @include transition;
-  max-height: 720px;
+  max-height: 150px;
   max-width: 100%;
   height: auto;
   width: auto;
@@ -630,6 +651,20 @@ input, textarea {
   border-radius: $radius;
   font-family: $fancy;
   letter-spacing: .5px;
+}
+
+.purchase-field {
+  font-size: 1em;
+  font-weight: 400;
+  border: none;
+  border-bottom: 2px solid $black;
+  color: $black;
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: $fancy;
+  letter-spacing: .5px;
+  padding: .5vh 1vw;
+  background: transparent;
 }
 
 .StripeElement {
